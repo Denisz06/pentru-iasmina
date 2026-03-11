@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Pentru Iasmina ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(#020111,#191621);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+h1{
+font-size:50px;
+margin-top:120px;
+}
+
+.section{
+padding:80px 20px;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+max-width:700px;
+margin:auto;
+margin-top:30px;
+backdrop-filter:blur(5px);
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:12px;
+background:#ff4d88;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff1a66;
+}
+
+.heart{
+position:fixed;
+font-size:24px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10vh);}
+100%{transform:translateY(110vh);}
+}
+
+.star{
+position:fixed;
+width:2px;
+height:2px;
+background:white;
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:0.2;}
+to{opacity:1;}
+}
+
+.counter{
+font-size:26px;
+margin-top:20px;
+color:#ff9ecb;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Pentru Iasmina Maria ❤️</h1>
+
+<div class="section">
+<div class="card">
+
+<h2>Un mic loc pe internet făcut doar pentru tine</h2>
+
+<p>
+Nu știu dacă există cadoul perfect…  
+dar am vrut să creez ceva care să fie doar al nostru.
+</p>
+
+</div>
+</div>
+
+
+<div class="section">
+<div class="card">
+
+<h2>Totul a început pe</h2>
+
+<h2>23 Martie 2025</h2>
+
+<div class="counter" id="counter"></div>
+
+<p>
+De atunci viața mea e mult mai frumoasă.
+</p>
+
+</div>
+</div>
+
+
+<div class="section">
+<div class="card">
+
+<h2>Lucruri pe care le-am învățat despre tine 😂</h2>
+
+<p>💤 Doarme mult</p>
+<p>😤 Se supără repede</p>
+<p>🔥 Uneori mă enervează maxim</p>
+<p>🧸 Este copilăroasă</p>
+
+<p>
+Dar toate lucrurile astea sunt exact motivele pentru care te iubesc.
+</p>
+
+</div>
+</div>
+
+
+<div class="section">
+<div class="card">
+
+<h2>Adevărul este...</h2>
+
+<p>
+Ești fix cum mi-am imaginat că ar trebui să fie persoana de lângă mine.
+</p>
+
+<p>
+Și pur și simplu te iubesc pentru cum ești tu.
+</p>
+
+<p>
+Cu tine mă simt <b>acasă</b>.
+</p>
+
+</div>
+</div>
+
+
+<div class="section">
+<div class="card">
+
+<h2>Apasă aici ❤️</h2>
+
+<button onclick="love()">Apasă</button>
+
+<p id="final"></p>
+
+</div>
+</div>
+
+
+<script>
+
+function love(){
+
+document.getElementById("final").innerHTML =
+"Te iubesc Iasmina ❤️ Și abia aștept să trăim încă o mulțime de momente împreună.";
+
+for(let i=0;i<40;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(3+Math.random()*2)+"s";
+
+document.body.appendChild(heart);
+
+}
+
+}
+
+
+let start=new Date("2025-03-23");
+
+let counter=document.getElementById("counter");
+
+function update(){
+
+let now=new Date();
+
+let diff=now-start;
+
+let days=Math.floor(diff/(1000*60*60*24));
+
+counter.innerHTML="Suntem împreună de "+days+" zile ❤️";
+
+}
+
+update();
+
+setInterval(update,1000);
+
+
+for(let i=0;i<150;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+star.style.animationDuration=(1+Math.random()*3)+"s";
+
+document.body.appendChild(star);
+
+}
+
+</script>
+
+</body>
+</html>
